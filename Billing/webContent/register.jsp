@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="model.Billing"%>
+<%@page import="com.UserAPI"%>
+<%@page import="com.BillAPI"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,8 +10,11 @@
 <title>Register here</title>
 
 
-<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style3.css" />
+    <script src="Components/jquery-3.2.1.min.js"></script>
+    <script src="Components/bill.js"></script>
+    <script src="Components/user.js"></script>
     <!--Stylesheet-->
     <style media="screen">
     
@@ -42,30 +48,35 @@
 
  <div class="container">
   
-    <form>
+    <form id="formItem" name="formItem">
         <h3>Register</h3>
 
-        <label for="username">Full Name</label>
-        <input type="text" placeholder="Full Name" id="username">
+        <label for="name">Full Name</label>
+        <input type="text" placeholder="Full Name" id="name">
 
-        <label for="password">Address</label>
-        <input type="password" placeholder="Address" id="password">
+        <label for="address">Address</label>
+        <input type="text" placeholder="Address" id="address">
         
-         <label for="username">Phone Number</label>
-        <input type="text" placeholder="Phone" id="username">
+         <label for="phone">Phone Number</label>
+        <input type="text" placeholder="Phone" id="phone">
         
-         <label for="username">Email</label>
-        <input type="text" placeholder="Email" id="username">
+         <label for="email">Email</label>
+        <input type="text" placeholder="Email" id="email">
         
          <label for="username">Username</label>
         <input type="text" placeholder="Username" id="username">
         
-         <label for="username">Password</label>
-        <input type="text" placeholder="Password" id="username">
+         <label for="password">Password</label>
+        <input type="password" placeholder="Password" id="password">
 
-        <button>Register</button>
+        <button id="btnSave" name="btnSave" >Register</button>
+        
+        <input type="hidden" id="hidIDSave" name="hidIDSave" value="">
         
     </form>
+    
+                <div id="alertSuccess" class="alert alert-success"></div>
+				<div id="alertError" class="alert alert-danger"></div>
     </div>
 </body>
 </html>

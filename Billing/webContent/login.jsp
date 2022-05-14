@@ -1,14 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<%@page import="model.Billing"%>
+<%@page import="com.UserAPI"%>
+<%
+	if (session.getAttribute("username") != null) {
+		response.sendRedirect("login.jsp");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="ISO-8859-1">
 <title>login</title>
 
- 
- <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style2.css" />
+    <script src="Components/jquery-3.2.1.min.js"></script>
+    <script src="Components/bill.js"></script>
     <!--Stylesheet-->
     <style media="screen">
     
@@ -41,19 +49,20 @@
 <body>
 
  <div class="container">
-      
-    <form>
+   <div class="card">   
+    <form id="formLogin">
         <h3>Login</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" id="username">
+        <input type="text" placeholder="Email or Phone" id="username" name="username">
 
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" id="password">
+        <input type="password" placeholder="Password" id="password" name="password">
 
-        <button>Log In</button>
+        <button id="btnLogin" name="btnLogin">Log In</button>
+        <div id="alertError" class="alert alert-danger"></div>
         
     </form>
-    </div>
+    </div></div>
 </body>
 </html>
