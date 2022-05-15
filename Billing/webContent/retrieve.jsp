@@ -1,3 +1,4 @@
+<%@ page import="com.Billing"%>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html>
@@ -6,9 +7,13 @@
 <meta charset="ISO-8859-1">
 
 <link rel="stylesheet" href="./css/style.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<link rel="stylesheet" href="Views/bootstrap.min.css">
 <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+<script src="Componets/jquery-3.2.1.min.js"></script>
+   <script src="Componets/bill.js"></script>
 <style>
+
 .container{
 	position: relative;
 	width: 100%;
@@ -33,7 +38,7 @@
 }
 
 .contact-box{
-	max-width: 600px;
+	max-width: 90%;
 	display: grid;
 	
 	justify-content: center;
@@ -41,6 +46,59 @@
 	text-align: center;
 	background-color: #fff;
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
+}
+
+.right{
+	padding: 25px 40px;
+}
+
+.content {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  border-radius: 5px 5px 0 0;
+  width: 100%;
+  margin: 30px 0;
+  margin-left: 30px; 
+  margin-right: 30px;
+}
+
+.content td, .content th {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  
+}
+
+.content tr:nth-child(even){background-color: #f2f2f2;}
+
+.content tr:hover {background-color: #ddd;}
+
+.content th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #d7702d;
+  color: white;
+  
+}
+
+.btn1{
+	width: ;
+	padding: 12px;
+	background-color: black;
+	color: #fff;
+	font-size: 1.rem;
+	border: none;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	transition: .3s;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.btn1:hover{
+    background-color: gray;
 }
 
 h1{
@@ -55,19 +113,9 @@ h1{
  margin-below: 10px;
  }
  
-.field{
-	width: 70%;
-	border: 2px solid rgba(0, 0, 0, 0);
-	outline: none;
-	background-color: rgba(230, 230, 230, 0.6);
-	padding: 0.5rem 1rem;
-	font-size: 1.1rem;
-	margin-bottom: 22px;
-	margin-top: 10px;
-	transition: .3s;
-}
+
 </style>
-<title>Update Details</title>
+<title>Billing Details</title>
 </head>
 <body>
 
@@ -79,37 +127,37 @@ h1{
      <ul class="nav-links">
       
        <div class="menu">
-         <li><a href="./index.jsp">Home</a></li>
+         <li><a href="/">Home</a></li>
          <li><a href="/">Dashboard</a></li>
          <li><a href="/">Profile</a></li>
+         <li><a href="/">Contact</a></li>
          <li><a href="/">Logout</a></li>
          
        </div>
      </ul>
-   </nav><br>
+   </nav>
    
     <div class="container">
-    <div class="contact-box">
-    
-    <h2>Update Details</h2> <br><br><br>
-    
-     <form action="insert" method ="post" onsubmit="return InsertValidation()">
-	   
-	  
-       
-       <input type="text" class="field" placeholder="Full Name" id="name" name="name">
-	   <input type="text" class="field" placeholder="Account Number" id="add1" name="add1">
-	   <input type="text" class="field" placeholder="Service Address" id="add2" name="add2">
-	   <input type="text" class="field" placeholder="Due Date" id="postalCode" name="postalCode">
-	   <input type="text" class="field" placeholder="Units Used" id="region" name="region">
-	   <input type="text" class="field" placeholder="Amount" id="city" name="city">
-	   
-	 
-	   
-	    <input type="submit" id="btnUpdate" name="submit" value="Update" class="btn" >
-		</form>
-</div></div>
+		<div class="contact-box">
+			
+				<h2>Billing Details</h2> 
+				
+				
 
+  <div class="row my-3">
+ 
+		<div class="col-md-12">
+				<div id="divItemsGrid">
+				 <%
+				 Billing billingObj = new Billing();
+				 		 out.print(billingObj.readbilldetails());
+				 %>
+				 </div>
+		</div>
+ 
+</div>
+</div>
+</div>
 <footer>
   <div class="footer-bottom">  
   
@@ -130,5 +178,6 @@ h1{
 </div>
 
 </footer>
+   
 </body>
 </html>

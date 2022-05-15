@@ -10,8 +10,9 @@
    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  
    <link rel="stylesheet" href="./css/style.css" />
+   <script src="Componets/jquery-3.2.1.min.js"></script>
+   <script src="Componets/bill.js"></script>
 <title>Insert Details</title>
 
 <style>
@@ -85,7 +86,7 @@ h1{
      <ul class="nav-links">
       
        <div class="menu">
-         <li><a href="/">Home</a></li>
+         <li><a href="./index.jsp">Home</a></li>
          <li><a href="/">Dashboard</a></li>
          <li><a href="/">Profile</a></li>
          <li><a href="/">Logout</a></li>
@@ -100,21 +101,24 @@ h1{
    
     <h2>Insert Details</h2> <br><br><br>
     
-     <form action="insert" method ="post" onsubmit="return InsertValidation()">
+     <form id="formbill" name="formbill" action="retrieve.jsp" method ="post">
 	   
 	  
        
        <input type="text" class="field" placeholder="Full Name" id="name" name="name">
-	   <input type="text" class="field" placeholder="Account Number" id="add1" name="add1">
-	   <input type="text" class="field" placeholder="Service Address" id="add2" name="add2">
-	   <input type="text" class="field" placeholder="Due Date" id="postalCode" name="postalCode">
-	   <input type="text" class="field" placeholder="Units Used" id="region" name="region">
-	   <input type="text" class="field" placeholder="Amount" id="city" name="city">
+	   <input type="text" class="field" placeholder="Account Number" id="accountNumber" name="accountNumber">
+	   <input type="text" class="field" placeholder="Service Address" id="serviceAddress" name="serviceAddress">
+	   <input type="text" class="field" placeholder="Due Date" id="dueDate" name="dueDate">
+	   <input type="text" class="field" placeholder="Units Used" id="unitsUsed" name="unitsUsed">
+	   <input type="text" class="field" placeholder="Amount" id="amount" name="amount">
 	   
 	 
 	   
-	    <input type="submit" name="submit" value="Submit" class="btn" >
+	    <input type="hidden" id="hidebillIDSave" name="hidebillIDSave" value="Submit" class="btn" >
 		</form>
+		
+		<div id="alertSuccess" class="alert alert-success"></div>
+		    <div id="alertError" class="alert alert-danger"></div>
 </div></div>
 <br>
 <footer>
