@@ -1,7 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@page import="model.Billing"%>
-<%@page import="com.UserAPI"%>
 <%@page import="com.BillAPI"%>
 <!DOCTYPE html>
 <html>
