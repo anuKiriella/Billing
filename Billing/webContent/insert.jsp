@@ -88,7 +88,6 @@ h1{
          <li><a href="/">Home</a></li>
          <li><a href="/">Dashboard</a></li>
          <li><a href="/">Profile</a></li>
-         <li><a href="/">Contact</a></li>
          <li><a href="/">Logout</a></li>
          
        </div>
@@ -117,12 +116,12 @@ h1{
 	    <input type="submit" name="submit" value="Submit" class="btn" >
 		</form>
 </div></div>
-</div><br>
+<br>
 <footer>
   <div class="footer-bottom">  
   
     <h1>ElectroGrid (EG) Services</h1><br>
-   <div class="a1">Foolish Developer is a dev company which develops programs <br>and releases the final output and source code. </div>
+   <div class="a1">We provide and maintains the electricity power of Sri Lanka. <br>Monitor the power consumption of users.</div>
     
      
     <ul class="socials">

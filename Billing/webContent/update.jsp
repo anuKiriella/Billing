@@ -6,9 +6,8 @@
 <meta charset="ISO-8859-1">
 
 <link rel="stylesheet" href="./css/style.css" />
-<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
 <style>
 .container{
 	position: relative;
@@ -83,7 +82,6 @@ h1{
          <li><a href="/">Home</a></li>
          <li><a href="/">Dashboard</a></li>
          <li><a href="/">Profile</a></li>
-         <li><a href="/">Contact</a></li>
          <li><a href="/">Logout</a></li>
          
        </div>
@@ -108,7 +106,7 @@ h1{
 	   
 	 
 	   
-	    <input type="submit" name="submit" value="Update" class="btn" >
+	    <input type="submit" id="btnUpdate" name="submit" value="Update" class="btn" >
 		</form>
 </div></div>
 
@@ -116,7 +114,7 @@ h1{
   <div class="footer-bottom">  
   
     <h1>ElectroGrid (EG) Services</h1><br>
-   <div class="a1">Foolish Developer is a dev company which develops programs <br>and releases the final output and source code. </div>
+   <div class="a1">We provide and maintains the electricity power of Sri Lanka. <br>Monitor the power consumption of users.</div>
     
      
     <ul class="socials">
